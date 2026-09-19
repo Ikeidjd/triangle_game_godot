@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ckjlt02l36noe"]
+
+[ext_resource type="Script" uid="uid://b3mjyb4bmm7si" path="res://scripts/bullet.gd" id="1_mkf8s"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7vk58"]
+radius = 10.0
+height = 20.0
+
+[node name="Bullet" type="RigidBody2D" unique_id=696816117]
+gravity_scale = 0.0
+script = ExtResource("1_mkf8s")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1036356317]
+mesh = SubResource("SphereMesh_7vk58")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=152924823]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
