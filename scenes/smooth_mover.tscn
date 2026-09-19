@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cjaym8nkt3qco"]
+
+[ext_resource type="Script" uid="uid://ualtkll1f5t3" path="res://scripts/smooth_mover.gd" id="1_w3ann"]
+
+[node name="SmoothMover" type="Node" unique_id=184683207]
+script = ExtResource("1_w3ann")

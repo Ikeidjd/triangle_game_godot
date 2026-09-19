@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://7xhrbqq77aqj"]
+
+[ext_resource type="Script" uid="uid://ualtkll1f5t3" path="res://scripts/smooth_mover.gd" id="1_3tnia"]
+[ext_resource type="Script" uid="uid://bhkxddnd8kvw8" path="res://scripts/chaser.gd" id="1_7i7co"]
+[ext_resource type="PackedScene" uid="uid://dgfxn7e2suq50" path="res://scenes/pseudo_triangle.tscn" id="2_abhlf"]
+
+[node name="Chaser" type="CharacterBody2D" unique_id=385164895]
+script = ExtResource("1_7i7co")
+
+[node name="PseudoTriangle" parent="." unique_id=1975301191 instance=ExtResource("2_abhlf")]
+color = Color(1, 0, 0, 1)
+width = 30.0
+height = 30.0
+
+[node name="SmoothMover" type="Node" parent="." unique_id=937413221]
+unique_name_in_owner = true
+script = ExtResource("1_3tnia")
+acceleration = 900.0
+deceleration = 300.0
+max_speed = 300.0
+metadata/_custom_type_script = "uid://ualtkll1f5t3"

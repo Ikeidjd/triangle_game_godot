@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dgfxn7e2suq50"]
+
+[ext_resource type="Script" uid="uid://bqw5kb17npy7q" path="res://scripts/pseudo_triangle.gd" id="1_gn40j"]
+
+[node name="PseudoTriangle" type="Polygon2D" unique_id=1975301191]
+script = ExtResource("1_gn40j")
+width = 40.0
+height = 40.0
+indent_width_proportion = 0.25

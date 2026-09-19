@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bsq0h4e5bph5l"]
+
+[ext_resource type="PackedScene" uid="uid://cjaym8nkt3qco" path="res://scenes/smooth_mover.tscn" id="1_aanbt"]
+[ext_resource type="Script" uid="uid://7ajj52s1026i" path="res://scripts/charger.gd" id="1_pxnrp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ml2ta"]
+radius = 16.0
+height = 32.0
+
+[node name="Charger" type="CharacterBody2D" unique_id=1732828590]
+script = ExtResource("1_pxnrp")
+
+[node name="Ball" type="MeshInstance2D" parent="." unique_id=983058189]
+modulate = Color(0, 0, 1, 1)
+mesh = SubResource("SphereMesh_ml2ta")
+
+[node name="SmoothMover" parent="." unique_id=184683207 instance=ExtResource("1_aanbt")]
+unique_name_in_owner = true
+acceleration = 2200.0
+deceleration = 800.0
+max_speed = 800.0
