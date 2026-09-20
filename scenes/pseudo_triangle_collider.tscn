@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0n3biq5odhxl"]
+
+[ext_resource type="Script" uid="uid://bmsskcxqpbtnl" path="res://scenes/pseudo_triangle_collider.gd" id="1_dqrlb"]
+
+[node name="PseudoTriangleCollider" type="CollisionPolygon2D" unique_id=1877337116]
+polygon = PackedVector2Array(40, 20, 0, 40, 10, 20, 0, 0)
+script = ExtResource("1_dqrlb")

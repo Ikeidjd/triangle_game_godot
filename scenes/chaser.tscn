@@ -3,14 +3,19 @@
 [ext_resource type="Script" uid="uid://ualtkll1f5t3" path="res://scripts/smooth_mover.gd" id="1_3tnia"]
 [ext_resource type="Script" uid="uid://bhkxddnd8kvw8" path="res://scripts/chaser.gd" id="1_7i7co"]
 [ext_resource type="PackedScene" uid="uid://dgfxn7e2suq50" path="res://scenes/pseudo_triangle.tscn" id="2_abhlf"]
+[ext_resource type="PackedScene" uid="uid://b0n3biq5odhxl" path="res://scenes/pseudo_triangle_collider.tscn" id="3_cyd77"]
 
-[node name="Chaser" type="CharacterBody2D" unique_id=385164895]
+[node name="Chaser" type="Area2D" unique_id=415235645]
+collision_layer = 2
 script = ExtResource("1_7i7co")
 
 [node name="PseudoTriangle" parent="." unique_id=1975301191 instance=ExtResource("2_abhlf")]
 color = Color(1, 0, 0, 1)
 width = 30.0
 height = 30.0
+
+[node name="PseudoTriangleCollider" parent="." unique_id=1877337116 node_paths=PackedStringArray("pseudo_triangle") instance=ExtResource("3_cyd77")]
+pseudo_triangle = NodePath("../PseudoTriangle")
 
 [node name="SmoothMover" type="Node" parent="." unique_id=937413221]
 unique_name_in_owner = true

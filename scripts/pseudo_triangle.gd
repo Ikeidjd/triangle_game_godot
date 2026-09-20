@@ -16,3 +16,5 @@ func _ready() -> void:
 		Vector2(width * indent_width_proportion, height * 0.5),
 		Vector2(0.0, 0.0),
 	]))
+	
+	print(polygon)

@@ -7,7 +7,11 @@
 radius = 16.0
 height = 32.0
 
-[node name="Charger" type="CharacterBody2D" unique_id=1732828590]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7vk58"]
+radius = 16.0
+
+[node name="Charger" type="Area2D" unique_id=1349260764]
+collision_layer = 2
 script = ExtResource("1_pxnrp")
 
 [node name="Ball" type="MeshInstance2D" parent="." unique_id=983058189]
@@ -19,3 +23,6 @@ unique_name_in_owner = true
 acceleration = 2200.0
 deceleration = 800.0
 max_speed = 800.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=600309661]
+shape = SubResource("CircleShape2D_7vk58")
